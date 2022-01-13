@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "test": "jest --collectCoverage --silent --testPathPattern=/test --maxWorkers=1 --forceExit --passWithNoTests"
+    "test": "jest --collectCoverage --silent --testPathPattern=/test --maxWorkers=1 --forceExit --passWithNoTests",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +25,12 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.12"
+  },
+  "jest": {
+    "verbose": true,
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/src/test"
+    ]
   }
 }
